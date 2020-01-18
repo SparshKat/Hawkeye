@@ -150,6 +150,18 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
+        <div className="section section-dark text-center">
+          <h2 className="title">Let's Evaluate!</h2>
+            <Container>
+              <Row>
+                <Col md = "12">
+                      <Button className="btn-fill" color="danger" size="lg" href="/profile-page">
+                        Click Here!
+                      </Button>
+                </Col>
+              </Row>
+            </Container>
+        </div>
         {/*<div className="section section-dark text-center">
           <Container>
             <h2 className="title">Let's talk about us</h2>
