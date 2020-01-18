@@ -150,7 +150,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center">
+        {/*<div className="section section-dark text-center">
           <Container>
             <h2 className="title">Let's talk about us</h2>
             <Row>
@@ -310,10 +310,10 @@ function LandingPage() {
                 </Card>
               </Col>
             </Row>
-          </Container>
-        </div>
-        <div className="section landing-section">
-          <Container>
+          </Container> 
+        </div> */}
+        {/*<div className="section landing-section">
+           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Keep in touch?</h2>
@@ -358,8 +358,8 @@ function LandingPage() {
                 </Form>
               </Col>
             </Row>
-          </Container>
-        </div>
+          </Container> 
+        </div>*/}
       </div>
       <DemoFooter />
     </>

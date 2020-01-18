@@ -77,7 +77,7 @@ function ExamplesNavbar() {
             title="Coded by Creative Tim"
             tag={Link}
           >
-            Paper Kit 2
+            Cheat-India
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -96,7 +96,7 @@ function ExamplesNavbar() {
           navbar
           isOpen={navbarCollapse}
         >
-          <Nav navbar>
+          {/* <Nav navbar>
             <NavItem>
               <NavLink to="/index" tag={Link}>
                 <i className="nc-icon nc-layout-11" /> Components
@@ -154,7 +154,7 @@ function ExamplesNavbar() {
                 <p className="d-lg-none">GitHub</p>
               </NavLink>
             </NavItem>
-          </Nav>
+          </Nav> */}
         </Collapse>
       </Container>
     </Navbar>
