@@ -28,7 +28,7 @@ import "assets/demo/demo.css";
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import TestPage from "views/examples/TestPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 // others
 
@@ -45,14 +45,14 @@ ReactDOM.render(
         render={props => <LandingPage {...props} />}
       />
       <Route
-        path="/profile-page"
-        render={props => <ProfilePage {...props} />}
+        path="/test-page"
+        render={props => <TestPage {...props} />}
       />
       <Route
         path="/register-page"
         render={props => <RegisterPage {...props} />}
       />
-      <Redirect to="/index" />
+      <Redirect to="/landing" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

@@ -155,7 +155,7 @@ function LandingPage() {
             <Container>
               <Row>
                 <Col md = "12">
-                      <Button className="btn-fill" color="danger" size="lg" href="/profile-page">
+                      <Button className="btn-fill" color="danger" size="lg" href="/test-page">
                         Click Here!
                       </Button>
                 </Col>

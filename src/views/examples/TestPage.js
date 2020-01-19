@@ -171,13 +171,13 @@ function ProfilePage() {
             </TabPane>
             <TabPane className="text-center" tabId="2" id="Ready">
               <h3 className="text-muted">No body has been evaluated yet :(</h3>
-              <Button className="btn-round" color="warning">
+              <Button className="btn-round" color="warning" href= "/profile-page">
                 Start Test Analysis Again!
               </Button>
             </TabPane>
             <TabPane className="text-center" tabId="3" id="Not Ready">
               <h3 className="text-muted">No body has been evaluated yet :(</h3>
-              <Button className="btn-round" color="warning">
+              <Button className="btn-round" color="warning" href= "/profile-page">
                 Start Test Analysis Again!
               </Button>
             </TabPane>
