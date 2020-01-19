@@ -52,10 +52,11 @@ class SeatPage extends Component {
         <div className="section profile-content">
           <Container>
             <CentreInfo />
-            <SeatMap />
+            {/* <SeatMap /> */}
             <br />
             
           </Container>
+          <SeatMap />
         </div>
         <DemoFooter />
       </>
