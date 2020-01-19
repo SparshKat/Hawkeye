@@ -38,6 +38,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import CentreInfo from "react-components/CentreInfo";
 
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -61,54 +62,7 @@ function ProfilePage() {
       <ProfilePageHeader />
       <div className="section profile-content">
         <Container>
-          <div className="owner">
-            <div className="avatar">
-              <img
-                alt="..."
-                className="img-thumbnail img-responsive"
-                src={require("assets/img/animated-magnifying-analysis.png")}
-              />
-            </div>
-            <div className="name">
-              <h4 className="title">
-                CBSE 12th Board Centre #467 <br />
-              </h4>
-              <h6 className="description">Class Strength - <div>40</div></h6>
-            </div>
-          </div>
-          <br />
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <div>
-                <h6>
-                  {/* <span className="note">Header 6</span> */}
-                  Invigilators : 
-                </h6>
-                <p>
-                  {/* <span className="note">Paragraph</span> */}
-                  Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari
-                </p>
-                
-              </div>
-              <br />
-            {/* <div className="typography-line">
-              <h6>
-                <span className="note">Header 6</span>
-                Thinking in textures
-              </h6>
-            </div> */}
-              {/* <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
-              </p> */}
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
-              </Button>
-            </Col>
-          </Row>
+          <CentreInfo />
           <br />
           <div className="nav-tabs-navigation">
             <div className="nav-tabs-wrapper">
