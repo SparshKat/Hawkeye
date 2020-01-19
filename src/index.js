@@ -41,7 +41,7 @@ ReactDOM.render(
         render={props => <NucleoIcons {...props} />}
       />
       <Route
-        path="/"
+        path="/landing"
         render={props => <LandingPage {...props} />}
       />
       <Route

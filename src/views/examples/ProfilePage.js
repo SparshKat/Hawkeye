@@ -65,25 +65,44 @@ function ProfilePage() {
             <div className="avatar">
               <img
                 alt="..."
-                className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/faces/joe-gardner-2.jpg")}
+                className="img-thumbnail img-responsive"
+                src={require("assets/img/animated-magnifying-analysis.png")}
               />
             </div>
             <div className="name">
               <h4 className="title">
-                Jane Faker <br />
+                CBSE 12th Board Centre #467 <br />
               </h4>
-              <h6 className="description">Music Producer</h6>
+              <h6 className="description">Class Strength - <div>40</div></h6>
             </div>
           </div>
+          <br />
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
+              <div>
+                <h6>
+                  {/* <span className="note">Header 6</span> */}
+                  Invigilators : 
+                </h6>
+                <p>
+                  {/* <span className="note">Paragraph</span> */}
+                  Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari
+                </p>
+                
+              </div>
+              <br />
+            {/* <div className="typography-line">
+              <h6>
+                <span className="note">Header 6</span>
+                Thinking in textures
+              </h6>
+            </div> */}
+              {/* <p>
                 An artist of considerable range, Jane Faker — the name taken by
                 Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
                 and records all of his own music, giving it a warm, intimate
                 feel with a solid groove structure.
-              </p>
+              </p> */}
               <br />
               <Button className="btn-round" color="default" outline>
                 <i className="fa fa-cog" /> Settings
