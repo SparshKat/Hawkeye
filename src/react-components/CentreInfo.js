@@ -73,7 +73,7 @@ class CentreInfo extends Component {
                 feel with a solid groove structure.
               </p> */}
           <br />
-          <Button className="btn-round" color="success" outline href="/profile-page">
+          <Button className="btn-round" color="success" outline href="/seat-page">
             <i className="fa nc-check-2" /> Click Here!
           </Button>
         </Col>

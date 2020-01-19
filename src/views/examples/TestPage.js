@@ -18,6 +18,7 @@
 */
 import React from "react";
 
+
 // reactstrap components
 import {
   Button,
@@ -120,6 +121,8 @@ function ProfilePage() {
                             Sparsh Katiyar<br />
                             <small>Roll Number - e24tqu16</small>
                             < br />
+                            <small>Row No. - 1</small>
+                            < br />
                             <small>Seat No. - 1</small>
                           </h6>
                         </Col>
@@ -152,6 +155,8 @@ function ProfilePage() {
                               Rashid Saifi<br />
                               <small>Roll Number - e1425ysg6</small>
                               < br />
+                              <small>Row No. - 1</small>
+                              < br />
                               <small>Seat No. - 2</small>
                           </h6>
                         </Col>
@@ -176,8 +181,8 @@ function ProfilePage() {
               </Button>
             </TabPane>
             <TabPane className="text-center" tabId="3" id="Not Ready">
-              <h3 className="text-muted">No body has been evaluated yet :(</h3>
-              <Button className="btn-round" color="warning" href= "/profile-page">
+              <h3 className="text-muted">Everybody has been evaluated :)</h3>
+              <Button className="btn-round" color="success" href= "/profile-page">
                 Start Test Analysis Again!
               </Button>
             </TabPane>

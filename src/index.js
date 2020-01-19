@@ -30,6 +30,7 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
 import TestPage from "views/examples/TestPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
+import SeatPage from "views/examples/SeatPage.js";
 // others
 
 ReactDOM.render(
@@ -47,6 +48,10 @@ ReactDOM.render(
       <Route
         path="/test-page"
         render={props => <TestPage {...props} />}
+      />
+      <Route
+        path="/seat-page"
+        render={props => <SeatPage {...props} />}
       />
       <Route
         path="/register-page"
