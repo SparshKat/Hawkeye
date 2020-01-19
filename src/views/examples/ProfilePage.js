@@ -84,7 +84,7 @@ function ProfilePage() {
                       toggle("2");
                     }}
                   >
-                    Completed
+                    Ready
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -94,7 +94,7 @@ function ProfilePage() {
                       toggle("3");
                     }}
                   >
-                    Not Completed
+                    Not Ready
                   </NavLink>
                 </NavItem>
               </Nav>
@@ -102,7 +102,7 @@ function ProfilePage() {
           </div>
           {/* Tab panes */}
           <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
+            <TabPane tabId="1" id="All">
               <Row>
                 <Col className="ml-auto mr-auto" md="6">
                   <ul className="list-unstyled follows">
@@ -117,8 +117,10 @@ function ProfilePage() {
                         </Col>
                         <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
                           <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
+                            Sparsh Katiyar<br />
+                            <small>Roll Number - e24tqu16</small>
+                            < br />
+                            <small>Seat No. - 1</small>
                           </h6>
                         </Col>
                         <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
@@ -147,8 +149,10 @@ function ProfilePage() {
                         </Col>
                         <Col lg="7" md="4" xs="4">
                           <h6>
-                            Banks <br />
-                            <small>Singer</small>
+                              Rashid Saifi<br />
+                              <small>Roll Number - e1425ysg6</small>
+                              < br />
+                              <small>Seat No. - 2</small>
                           </h6>
                         </Col>
                         <Col lg="3" md="4" xs="4">
@@ -165,10 +169,16 @@ function ProfilePage() {
                 </Col>
               </Row>
             </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
+            <TabPane className="text-center" tabId="2" id="Ready">
+              <h3 className="text-muted">No body has been evaluated yet :(</h3>
               <Button className="btn-round" color="warning">
-                Find artists
+                Start Test Analysis Again!
+              </Button>
+            </TabPane>
+            <TabPane className="text-center" tabId="3" id="Not Ready">
+              <h3 className="text-muted">No body has been evaluated yet :(</h3>
+              <Button className="btn-round" color="warning">
+                Start Test Analysis Again!
               </Button>
             </TabPane>
           </TabContent>
