@@ -52,7 +52,7 @@ class SeatPage extends Component {
         <div className="section profile-content">
           <Container>
             <CentreInfo />
-            <SeatMap rows={40} />
+            <SeatMap />
             <br />
             
           </Container>
