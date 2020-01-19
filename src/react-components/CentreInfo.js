@@ -3,21 +3,22 @@ import React, { Component } from "react";
 // reactstrap components
 import {
   Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  Container,
   Row,
   Col
 } from "reactstrap";
 
 
 class CentreInfo extends Component {
+
+  constructor(props){
+    super(props);
+     this.state = {
+       boardYear : "12th",
+       centreNumber : "#467",
+       classStrength : "40",
+       Invigilators : ["Dr. Ramgopal Verma" , "Mrs. Sushriti Mishra" , "Mr. Ramkesh Tiwari"]
+     }
+  }
 
   render() {
     return (
@@ -32,9 +33,12 @@ class CentreInfo extends Component {
         </div>
         <div className="name">
           <h4 className="title">
-            CBSE 12th Board Centre #467 <br />
+            CBSE 
+            <span> {this.state.boardYear}</span> Board Centre  
+            <span> {this.state.centreNumber}</span> <br />
           </h4>
-          <h6 className="description">Class Strength - <div>40</div></h6>
+            <h6 className="description">Class Strength - 
+            <div>{this.state.classStrength}</div></h6>
         </div>
       </div>
       <br />
@@ -42,6 +46,18 @@ class CentreInfo extends Component {
         <Col className="ml-auto mr-auto text-center" md="6">
           <div>
             <h6> Invigilators :</h6>
+            {this.state.Invigilators.forEach( (person,i) =>{
+              if(i === this.state.Invigilators.length-1){
+                return(
+                  <p> {person} </p>
+                );
+              } else {
+                return(
+                  <p>{person} | </p>
+                );
+              }
+              
+            })}
             <p>Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari</p>
           </div>
           {/* <div className="typography-line">
@@ -57,8 +73,8 @@ class CentreInfo extends Component {
                 feel with a solid groove structure.
               </p> */}
           <br />
-          <Button className="btn-round" color="default" outline>
-            <i className="fa fa-cog" /> Settings
+          <Button className="btn-round" color="success" outline>
+            <i className="fa nc-check-2" /> Click Here!
           </Button>
         </Col>
       </Row>
@@ -66,6 +82,5 @@ class CentreInfo extends Component {
     );
   }
 }
-
 
 export default CentreInfo;

@@ -74,7 +74,7 @@ function ProfilePage() {
                       toggle("1");
                     }}
                   >
-                    Follows
+                    All
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -84,7 +84,17 @@ function ProfilePage() {
                       toggle("2");
                     }}
                   >
-                    Following
+                    Completed
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={activeTab === "3" ? "active" : ""}
+                    onClick={() => {
+                      toggle("3");
+                    }}
+                  >
+                    Not Completed
                   </NavLink>
                 </NavItem>
               </Nav>
