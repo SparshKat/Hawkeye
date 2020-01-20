@@ -41,10 +41,10 @@ import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import CentreInfo from "react-components/CentreInfo";
 import SeatMap from "react-components/SeatMap";
+import DefaulterList from "react-components/DeafulterList"
 
 class SeatPage extends Component {
   render(){
- 
     return (
       <>
         <ExamplesNavbar />
@@ -58,6 +58,7 @@ class SeatPage extends Component {
           </Container>
           <SeatMap />
         </div>
+        <DefaulterList />
         <DemoFooter />
       </>
     );

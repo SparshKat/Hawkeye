@@ -52,29 +52,29 @@ class SeatPage extends Component {
     }
     render() {
         
-            return (
-
-            <div className ="plane">
-                <ol className="cabin fuselage">
-                    <li className="row row--1">
-                        <ol className="seats" type="A">
-                            {
-                                this.state.listOfPeople.map((person , i) => {
-                                    // console.log();
-                                    return(
-                                    // <p>{i}</p>
-                                        <li >
-                                            <div className="default">
-                                                {/* <p>i</p> */}
-                                            </div>   
-                                        </li>
-                                    );
-                                })
-                            }
-                        </ol>
-                    </li>
-                </ol>
-            </div>
+        return (
+                <div className ="plane">
+                    <ol className="cabin fuselage">
+                        <li className="row row--1">
+                            <ol className="seats" type="A">
+                                {
+                                    this.state.listOfPeople.map((person , i) => {
+                                        // console.log();
+                                        return(
+                                        // <p>{i}</p>
+                                            <li >
+                                                <div className="default">
+                                                    {/* <p>i</p> */}
+                                                </div>   
+                                            </li>
+                                        );
+                                    })
+                                }
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                
             );
         }
     }
