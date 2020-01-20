@@ -59,11 +59,10 @@ function LandingPage() {
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="title">Let's talk product</h2>
                 <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here. Add a button if you
-                  want the user to see more.
+                'Hawkeye'can be beneficial in monitoring the examination and 
+                listing the details of the defaulters. 
+                The system uses CCTV recordings to automatically detect cheating in the 
+                exam hall and mark them for review.
                 </h5>
                 <br />
                 <Button
@@ -82,13 +81,13 @@ function LandingPage() {
               <Col md="3">
                 <div className="info">
                   <div className="icon icon-info">
-                    <i className="nc-icon nc-album-2" />
+                    <i className="nc-icon nc-laptop" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <h4 className="info-title">Great on all devices</h4>
                     <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
+                    Our modern and clean responsive theme is optimised for almost 
+                    any device  like phone, tablet or pc and is fully responsive in real time.
                     </p>
                     <Button className="btn-link" color="info" href="#pablo">
                       See more
@@ -99,13 +98,13 @@ function LandingPage() {
               <Col md="3">
                 <div className="info">
                   <div className="icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
+                    <i className="nc-icon nc-satisfied" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
+                    <h4 className="info-title">Easy to use</h4>
                     <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
+                    With our integrated paltform, its easy for invigilators, to monitor the examination
+                    and list the defaulters
                     </p>
                     <Button className="btn-link" color="info" href="#pablo">
                       See more
@@ -119,10 +118,10 @@ function LandingPage() {
                     <i className="nc-icon nc-chart-bar-32" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">Statistics</h4>
+                    <h4 className="info-title">Great Analytics</h4>
                     <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
+                    CBSE can get profound insights about the test surveillance. These insights at macro and 
+                    micro level can be potent tool for monitoring and listing defaulters .
                     </p>
                     <Button className="btn-link" color="info" href="#pablo">
                       See more
@@ -133,13 +132,12 @@ function LandingPage() {
               <Col md="3">
                 <div className="info">
                   <div className="icon icon-info">
-                    <i className="nc-icon nc-sun-fog-29" />
+                    <i className="nc-icon nc-pin-3" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
+                    <h4 className="info-title">Active Accessibility</h4>
                     <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
+                      Experience a lag-free synchronised performance on your devices.
                     </p>
                     <Button className="btn-link" color="info" href="#pablo">
                       See more

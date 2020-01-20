@@ -51,11 +51,11 @@ class CentreInfo extends Component {
                 this.state.Invigilators.map( (person,i) =>{
                   if(i === this.state.Invigilators.length-1){
                     return(
-                      <p> {person} </p>
+                      <span> {person} </span>
                     );
                   } else {
                     return(
-                      <p>{person} | </p>
+                      <span>{person} | </span>
                     );
                   }
                   
@@ -65,21 +65,9 @@ class CentreInfo extends Component {
             
             {/* <p>Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari</p> */}
           </div>
-          {/* <div className="typography-line">
-              <h6>
-                <span className="note">Header 6</span>
-                Thinking in textures
-              </h6>
-            </div> */}
-          {/* <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
-              </p> */}
           <br />
           <Button className="btn-round" color="success" outline href="/seat-page">
-            <i className="fa nc-check-2" /> Click Here!
+            <i className="nc-icon nc-check-2" /> Click Here!
           </Button>
         </Col>
       </Row>
