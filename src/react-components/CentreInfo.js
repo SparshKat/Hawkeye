@@ -46,19 +46,24 @@ class CentreInfo extends Component {
         <Col className="ml-auto mr-auto text-center" md="6">
           <div>
             <h6> Invigilators :</h6>
-            {this.state.Invigilators.forEach( (person,i) =>{
-              if(i === this.state.Invigilators.length-1){
-                return(
-                  <p> {person} </p>
-                );
-              } else {
-                return(
-                  <p>{person} | </p>
-                );
+            <div style={{flex : "row"}}>
+              {
+                this.state.Invigilators.map( (person,i) =>{
+                  if(i === this.state.Invigilators.length-1){
+                    return(
+                      <p> {person} </p>
+                    );
+                  } else {
+                    return(
+                      <p>{person} | </p>
+                    );
+                  }
+                  
+                })
               }
-              
-            })}
-            <p>Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari</p>
+            </div>
+            
+            {/* <p>Dr. Ramgopal Verma | Mrs. Sushriti Mishra | Mr. Ramkesh Tiwari</p> */}
           </div>
           {/* <div className="typography-line">
               <h6>
