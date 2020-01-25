@@ -59,7 +59,7 @@ function LandingPage() {
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="title">Let's talk product</h2>
                 <h5 className="description">
-                'Hawkeye'can be beneficial in monitoring the examination and 
+                'Hawkeye' can be beneficial in monitoring the examination and 
                 listing the details of the defaulters. 
                 The system uses CCTV recordings to automatically detect cheating in the 
                 exam hall and mark them for review.
