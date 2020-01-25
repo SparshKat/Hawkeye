@@ -43,38 +43,63 @@ class SeatPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            numberOfPeople : "40",
-            listOfPeople : []
+            numberOfPeople : "140",
+            listOfPeople1 : [],
+            listOfPeople2: []
         }
-        for (let i = 0; i <=this.state.numberOfPeople; i++){
-            this.state.listOfPeople.push(i+1);
+        for (let i = 0; i <=this.state.numberOfPeople/2; i++){
+            this.state.listOfPeople1.push(i+1);
+        }
+
+        for (let i = 0; i <= this.state.numberOfPeople/2; i++) {
+            this.state.listOfPeople2.push(i + 1);
         }
     }
     render() {
-        
+
         return (
-                <div className ="plane">
-                    <ol className="cabin fuselage">
-                        <li className="row row--1">
-                            <ol className="seats" type="A">
+                <div className="container mt-5 p-5">
+                    <div className="row mx-5">
+                        <div className="offset-2 col-5 mx-auto">
+                            <div className="row no-gutters">
                                 {
-                                    this.state.listOfPeople.map((person , i) => {
-                                        // console.log();
-                                        return(
-                                        // <p>{i}</p>
-                                            <li >
-                                                <div className="default">
-                                                    {/* <p>i</p> */}
-                                                </div>   
-                                            </li>
+                                    this.state.listOfPeople1.map((person, i) => {
+                                        return (
+                                                <div className="col-2">
+                                                    <ol>
+                                                        <li>
+                                                            <div className="default">
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
                                         );
                                     })
                                 }
-                            </ol>
-                        </li>
-                    </ol>
+                            </div>
+                        </div>
+                        <div className="col-5">
+                            <div className="row no-gutters">
+                                {
+                                    this.state.listOfPeople2.map((person, i) => {
+                                        return (
+                                            <div className="col-2">
+                                                <ol>
+                                                    <li>
+                                                        <div className="default">
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        );
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                
+
             );
         }
     }

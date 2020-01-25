@@ -129,11 +129,12 @@ function ProfilePage() {
                         <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
                           <FormGroup check>
                             <Label check>
-                              <Input
+                              
+                              {/* <Input
                                 defaultChecked
                                 defaultValue=""
                                 type="checkbox"
-                              />
+                              /> */}
                               <span className="form-check-sign" />
                             </Label>
                           </FormGroup>
