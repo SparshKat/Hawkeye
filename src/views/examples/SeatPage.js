@@ -44,6 +44,25 @@ import SeatMap from "react-components/SeatMap";
 import DefaulterList from "react-components/DeafulterList"
 
 class SeatPage extends Component {
+    constructor(props){
+      super(props);
+      this.state = {
+          defaulterList : [{
+            name : "Aahad Khan",
+            img : "../assets/img/faces/ayo-ogunseinde-2.jpg" ,
+            rollNo : "E242763716",
+            rowNo : "5",
+            seatNo : "2"
+          } , {
+            name : "Lavanisha Sharma",
+            img : "../assets/img/faces/ayo-ogunseinde-2.jpg" ,
+            rollNo : "E242YU3Z",
+            rowNo : "8",
+            seatNo : "6"
+          }]
+      }
+      
+    }
   render(){
     return (
       <>
@@ -58,7 +77,7 @@ class SeatPage extends Component {
           </Container>
           <SeatMap />
         </div>
-        <DefaulterList />
+        <DefaulterList defaulterList={this.state.defaulterList}/>
         <DemoFooter />
       </>
     );

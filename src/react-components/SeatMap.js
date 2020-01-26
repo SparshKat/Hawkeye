@@ -1,43 +1,7 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { Component } from "react";
-// import Seatmap from "react-seatmap";
 
-// reactstrap components
-import {
-    Button,
-    // Label,
-    // FormGroup,
-    // Input,
-    // NavItem,
-    // NavLink,
-    // Nav,
-    // TabContent,
-    // TabPane,
-    Container,
-    Row,
-    Col
-} from "reactstrap";
-
-import DefaulterList from "./DeafulterList";
 import '../assets/scss/seatmap.scss'
-import { isThisTypeNode } from "typescript";
+
 
 class SeatPage extends Component {
     constructor(props){
@@ -45,18 +9,52 @@ class SeatPage extends Component {
         this.state = {
             numberOfPeople : "142",
             listOfPeople1 : [],
-            listOfPeople2: []
+            listOfPeople2: [] ,
+            defaulterList : []
         }
+        
+    }
+
+    componentDidMount(){
+        var temp1 = [];
+        var temp2 = [];
         for (let i = 0; i <=this.state.numberOfPeople/2; i++){
-            this.state.listOfPeople1.push(i+1);
+            temp1.push(i+1);
         }
 
         for (let i = 0; i <= this.state.numberOfPeople/2; i++) {
-            this.state.listOfPeople2.push(i + 1);
+            temp2.push(i + 1);
+        }
+        this.setState({
+            listOfPeople1 : temp1,
+            listOfPeople2 : temp2
+        })
+    }
+
+    componentDidUpdate(prevProps){
+        // axios.get here
+        if (this.props.userID !== prevProps.userID) {
+            // new array will be set into set state
+            // this.setState({
+
+            // })
         }
     }
-    render() {
+    renderElement(person) {
+        if( person.id === 2){
+            return(
+                <div className="changed">
+                </div>
+            );
+        } else {
+            return(
+                <div className="default">
+                </div>
+            );
+        }
+    }
 
+    render() {
         return (
 
                 <div className="container">
@@ -72,13 +70,13 @@ class SeatPage extends Component {
                         <div className="offset-2 offset-md-1 col-4">
                             <div className="row no-gutters">
                                 {
+                                    
                                     this.state.listOfPeople1.map((person, i) => {
                                         return (
                                                 <div className="col-3 col-md-2">
                                                     <ol>
                                                         <li>
-                                                            <div className="default">
-                                                            </div>
+                                                            {this.renderElement(person)}
                                                         </li>
                                                     </ol>
                                                 </div>

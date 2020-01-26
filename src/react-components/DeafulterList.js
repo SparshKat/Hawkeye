@@ -28,12 +28,17 @@ import {
     NavItem,
     NavLink,
     Nav,
+    Pagination,
+    PaginationItem,
+    PaginationLink,
     TabContent,
     TabPane,
     Container,
     Row,
     Col
 } from "reactstrap";
+
+import '../assets/scss/defaulter.scss'
 
 
 function DefaulterList(props){
@@ -62,6 +67,7 @@ function DefaulterList(props){
                     <NavItem>
                     <NavLink
                         className={activeTab === "1" ? "active" : ""}
+                        style={{color :"#FC4445" , fontWeight : "bold"}}
                         onClick={() => {
                         toggle("1");
                         }}>
@@ -76,69 +82,49 @@ function DefaulterList(props){
               <Row>
                 <Col className="ml-auto mr-auto" md="6">
                   <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Sparsh Katiyar<br />
-                            <small>Roll Number - e24tqu16</small>
-                            < br />
-                            <small>Row No. - 1</small>
-                            < br />
-                            <small>Seat No. - 1</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                              Rashid Saifi<br />
-                              <small>Roll Number - e1425ysg6</small>
-                              < br />
-                              <small>Row No. - 1</small>
-                              < br />
-                              <small>Seat No. - 2</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
+                      {
+                      props.defaulterList.map((person ,i )=>{
+                        return(
+                          <>
+                          <li>
+                            <Row >
+                              <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
+                                <img
+                                  alt="..."
+                                  className="img-circle img-no-padding img-responsive"
+                                  src= {require("assets/img/faces/ayo-ogunseinde-2.jpg")}
+                                />
+                              </Col>
+                              <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
+                                <h6>
+                                  {person.name}<br />
+                                  <small>Roll Number - {person.rollNo}</small>
+                                  < br />
+                                    <small>Row No. - {person.rowNo}</small>
+                                  < br />
+                                    <small>Seat No. - {person.searNo}</small>
+                                </h6>
+                              </Col>
+                              <Col className="ml-auto mr-auto" lg="3" md="4" xs="4" >
+                                
+                                <FormGroup check>
+                                
+                                  
+                         
+                                  <Label check >
+                                  
+                                    
+                                  </Label>
+                                </FormGroup>
+                                </Col>
+                            </Row>
+                          </li>
+                          <hr />
+                          </>
+                        );
+                        
+                      })
+                    }
                   </ul>
                 </Col>
               </Row>
