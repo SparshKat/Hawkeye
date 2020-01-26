@@ -60,6 +60,14 @@ class SeatPage extends Component {
         return (
 
                 <div className="container">
+                <div className="row mb-3 mx-md-5">
+                        <div className="col-6 ml-auto mr-auto text-center">
+                        <div className="ml-auto mr-auto text-center font-weight-bold">Column 1</div>
+                        </div>
+                        <div className="col-6">
+                        <div className="ml-auto mr-auto text-center font-weight-bold">Column 2</div>
+                        </div>
+                    </div>
                     <div className="row mx-md-5">
                         <div className="offset-2 offset-md-1 col-4">
                             <div className="row no-gutters">
@@ -102,11 +110,14 @@ class SeatPage extends Component {
                         </div>
 
                     </div>
+                    <div className="row">
+                    <div class="mt-5 ml-auto mr-auto text-center font-weight-bold"> Board This Way</div>
+                    </div>
                 <div className="row">
                     {/* <div className="ml-4 ml-md-2 col-1 col-md-2">
 
                     </div> */}
-                    <div className="mt-5 col-md-6 col-lg-7 mx-lg-auto">
+                    <div className="mt-2 col-md-6 col-lg-7 mx-lg-auto">
                         <div className="d-none d-md-block">
                             <img src="//assetscdn1.paytm.com/webmovies/5ff3a50c.png" />
                         </div>
