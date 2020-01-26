@@ -38,7 +38,7 @@ import {
     Col
 } from "reactstrap";
 
-import '../assets/scss/defaulter.scss'
+// import '../assets/scss/defaulter.scss'
 
 
 function DefaulterList(props){
@@ -106,14 +106,14 @@ function DefaulterList(props){
                                 </h6>
                               </Col>
                               <Col className="ml-auto mr-auto" lg="3" md="4" xs="4" >
-                                
+
                                 <FormGroup check>
-                                
-                                  
-                         
+
+
+
                                   <Label check >
-                                  
-                                    
+
+
                                   </Label>
                                 </FormGroup>
                                 </Col>
@@ -122,7 +122,7 @@ function DefaulterList(props){
                           <hr />
                           </>
                         );
-                        
+
                       })
                     }
                   </ul>
@@ -132,9 +132,9 @@ function DefaulterList(props){
           </TabContent>
             </Container>
         </div>
-            
+
         </>
     );
 }
-        
+
 export default DefaulterList;
