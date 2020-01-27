@@ -16,12 +16,20 @@ class SeatPage extends Component {
     }
 
     componentDidMount(){
+        // var self = this;
+        // var temp1 = [];
+        // var temp2 = [];
+        this.axiosGet();
+        
+    }
+
+    axiosGet(){
         var self = this;
         var temp1 = [];
         var temp2 = [];
         axios.get('http://localhost:8080/defaultTestData.json').then(data => {
             
-            console.log(data.data.personList.length);
+            // console.log(data.data.personList.length);
             // (list.data.personList).map((person,i) =>{
             //     console.log(person.name + "-> " + i);
             // })
@@ -29,7 +37,7 @@ class SeatPage extends Component {
             (data.data.personList).map((person, i) => {
                 if(i <= tempNumber/2){
                     temp1.push(person);
-                    console.log(person.name);
+                    // console.log(person.name);
                     // self.setState({
 
                     // })
@@ -44,31 +52,27 @@ class SeatPage extends Component {
         }).catch(err => {
             console.log(err);
         });
-        // for (let i = 0; i <=this.state.numberOfPeople/2; i++){
-        //     temp1.push(i+1);
-        // }
-
-        // for (let i = 0; i <= this.state.numberOfPeople/2; i++) {
-        //     temp2.push(i + 1);
-        // }
-        
     }
 
     componentDidUpdate(prevProps){
         // axios.get here
-        // axios.get('').then({
+        setTimeout(() =>
+        { this.axiosGet(); }
+        , 2000);
 
-        // })
 
         if (this.props.userID !== prevProps.userID) {
+            console.log("Change hua hai bhai Hua hai!")
             // new array will be set into set state
             // this.setState({
 
             // })
         }
     }
-    renderElement(person) {
-        if( person.id === 2){
+    
+    renderElement(id) {
+        console.log(id);
+        if( id === "2"){
             return(
                 <div className="changed">
                 </div>
@@ -96,14 +100,17 @@ class SeatPage extends Component {
                     <div className="row mx-md-5">
                         <div className="offset-2 offset-md-1 col-4">
                             <div className="row no-gutters">
+                                {console.log(this.state.listOfPeople1.length + "Yeah BC") }
                                 {
                                     
+                                    // var num1 = this.state.listOfPeople1
                                     this.state.listOfPeople1.map((person, i) => {
+                                        console.log(person);
                                         return (
                                                 <div className="col-3 col-md-2">
                                                     <ol>
                                                         <li>
-                                                            {this.renderElement(person)}
+                                                            {this.renderElement(person.id)}
                                                         </li>
                                                     </ol>
                                                 </div>
@@ -119,15 +126,15 @@ class SeatPage extends Component {
                             <div className="row no-gutters">
                                 {
                                     this.state.listOfPeople2.map((person, i) => {
+                                        // console.log(typeof(person.id));
                                         return (
                                             <div className="col-3 col-md-2">
-                                                <ol>
-                                                    <li>
-                                                        <div className="default">
-                                                        </div>
-                                                    </li>
-                                                </ol>
-                                            </div>
+                                                    <ol>
+                                                        <li>
+                                                            {this.renderElement(person.id)}
+                                                        </li>
+                                                    </ol>
+                                                </div>
                                         );
                                     })
                                 }
