@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import axios from 'axios'
 import '../assets/scss/seatmap.scss'
 
 
@@ -16,23 +16,50 @@ class SeatPage extends Component {
     }
 
     componentDidMount(){
+        var self = this;
         var temp1 = [];
         var temp2 = [];
-        for (let i = 0; i <=this.state.numberOfPeople/2; i++){
-            temp1.push(i+1);
-        }
+        axios.get('http://localhost:8080/defaultTestData.json').then(data => {
+            
+            console.log(data.data.personList.length);
+            // (list.data.personList).map((person,i) =>{
+            //     console.log(person.name + "-> " + i);
+            // })
+            var tempNumber = data.data.personList.length;
+            (data.data.personList).map((person, i) => {
+                if(i <= tempNumber/2){
+                    temp1.push(person);
+                    console.log(person.name);
+                    // self.setState({
 
-        for (let i = 0; i <= this.state.numberOfPeople/2; i++) {
-            temp2.push(i + 1);
-        }
-        this.setState({
-            listOfPeople1 : temp1,
-            listOfPeople2 : temp2
-        })
+                    // })
+                } else {
+                    temp2.push(person);
+                }
+            })
+            self.setState({
+                listOfPeople1 : temp1,
+                listOfPeople2 : temp2
+            })
+        }).catch(err => {
+            console.log(err);
+        });
+        // for (let i = 0; i <=this.state.numberOfPeople/2; i++){
+        //     temp1.push(i+1);
+        // }
+
+        // for (let i = 0; i <= this.state.numberOfPeople/2; i++) {
+        //     temp2.push(i + 1);
+        // }
+        
     }
 
     componentDidUpdate(prevProps){
         // axios.get here
+        // axios.get('').then({
+
+        // })
+
         if (this.props.userID !== prevProps.userID) {
             // new array will be set into set state
             // this.setState({
