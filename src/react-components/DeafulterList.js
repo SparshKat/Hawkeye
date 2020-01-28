@@ -102,7 +102,7 @@ function DefaulterList(props){
                                   < br />
                                     <small>Row No. - {person.rowNo}</small>
                                   < br />
-                                    <small>Seat No. - {person.searNo}</small>
+                                    <small>Seat No. - {person.seatNo}</small>
                                 </h6>
                               </Col>
                               <Col className="ml-auto mr-auto" lg="3" md="4" xs="4" >
