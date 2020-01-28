@@ -17,6 +17,7 @@
 
 */
 import React ,{Component} from "react";
+import axios from 'axios'
 // import Seatmap from "react-seatmap";
 
 // reactstrap components
@@ -47,22 +48,55 @@ class SeatPage extends Component {
     constructor(props){
       super(props);
       this.state = {
-          defaulterList : [{
-            name : "Aahad Khan",
-            img : "../assets/img/faces/ayo-ogunseinde-2.jpg" ,
-            rollNo : "E242763716",
-            rowNo : "5",
-            seatNo : "2"
-          } , {
-            name : "Lavanisha Sharma",
-            img : "../assets/img/faces/ayo-ogunseinde-2.jpg" ,
-            rollNo : "E242YU3Z",
-            rowNo : "8",
-            seatNo : "6"
-          }]
+          defaulterList : []
       }
-      
     }
+
+    componentDidMount(){
+      this.axiosGet();
+    }
+
+    axiosGet(){
+      var self = this;
+      var temp1 = [];
+      // var temp2 = [];
+      axios.get('http://localhost:8080/defaultTestData.json').then(data => {
+          
+          // console.log(data.data.personList.length);
+          // (list.data.personList).map((person,i) =>{
+          //     console.log(person.name + "-> " + i);
+          // })
+          (data.data.personList).map((person, i) => {
+            console.log(person);
+              if(person.id=="2"){
+                temp1.push(person);
+              }
+          })
+          self.setState({
+            defaulterList : temp1
+          })
+          
+      }).catch(err => {
+          console.log(err);
+      });
+  }
+
+  componentDidUpdate(prevProps){
+    // axios.get here
+    setTimeout(() =>
+    { this.axiosGet(); }
+    , 2000);
+
+
+    if (this.props.userID !== prevProps.userID) {
+        console.log("Change hua hai bhai Hua hai!")
+        // new array will be set into set state
+        // this.setState({
+
+        // })
+    }
+}
+
   render(){
     return (
       <>

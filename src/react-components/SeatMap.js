@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from 'axios'
 import '../assets/scss/seatmap.scss'
 
+import DefaulterList from "./DeafulterList";
+
 
 class SeatPage extends Component {
     constructor(props){
@@ -71,8 +73,12 @@ class SeatPage extends Component {
     }
     
     renderElement(id) {
-        console.log(id);
+        
         if( id === "2"){
+            // temp_defaulterList.push(person);
+            // self.setState({
+            //     defaulterList : temp_defaulterList
+            // })
             return(
                 <div className="changed">
                 </div>
@@ -100,7 +106,7 @@ class SeatPage extends Component {
                     <div className="row mx-md-5">
                         <div className="offset-2 offset-md-1 col-4">
                             <div className="row no-gutters">
-                                {console.log(this.state.listOfPeople1.length + "Yeah BC") }
+                                
                                 {
                                     
                                     // var num1 = this.state.listOfPeople1
@@ -156,8 +162,9 @@ class SeatPage extends Component {
                     </div>
                     {/* <div className="col-0 col-lg-1"></div> */}
                 </div>
+                {/* <DefaulterList defaulterList={this.state.defaulterList} /> */}
                 </div>
-
+                
             );
         }
     }
